@@ -18,11 +18,11 @@ def test_form_03():
         full_name_field = driver.find_element(By.ID, "userName")
         #web_elements = driver.find_elements(By.XPATH, "someXPath")
 
-        full_name_field.send_keys("Иван Иванов")
+        full_name_field.send_keys("Мария Сидорова")
 
         # Находим поле Email по его ID и вводим текст
         email_field = driver.find_element(By.ID, "userEmail")
-        email_field.send_keys("ivan@example.com")
+        email_field.send_keys("sidorovamary@example.com")
 
         # Находим кнопку Submit по ее ID и кликаем
         submit_button = driver.find_element(By.ID, "submit")
@@ -36,7 +36,7 @@ def test_form_03():
 
         # Проверяем, что в блоке результата появился введенный текст
 
-        assert "Иван Иванов" in result_box.text
+        assert "Мария Сидорова" in result_box.text
 
         print("Тест успешно пройден!")
 
